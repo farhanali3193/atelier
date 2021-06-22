@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -5,7 +6,7 @@ const axios = require('axios');
 const AWS = require("aws-sdk");
 const multer  = require('multer');
 const bodyParser = require('body-parser');
-require('dotenv').config();
+const cors = require('cors');
 
 const apiUrl = `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp`;
 const gitToken = process.env.GIT_API_TOKEN;
@@ -26,6 +27,7 @@ const app = express();
 const servingPath = path.join(__dirname, '..', 'client', 'dist');
 app.use(express.static(servingPath));
 app.use(bodyParser.json());
+app.use(cors());
 
 // Products API --------------------------------------------------------
 

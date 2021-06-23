@@ -258,12 +258,7 @@ app.get('/qa/questions', (req, res) => {
 })
 
 const port = 3000;
-var server = app.listen(port, () => {
+app.listen(port, () => {
   console.log('ENV', process.env.NODE_ENV);
-  console.log('GITHUB', process.env.GIT_API_TOKEN);
-  var host1 = server.address().address;
-  var port1 = server.address().port;
-  console.log('HOST', host1);
-  console.log('PORT', port1);
   console.log(`Listening on port http://localhost:${port}`);
 });

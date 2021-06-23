@@ -404,11 +404,11 @@ class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <OverviewErrorBoundary>
+        {/* <OverviewErrorBoundary>
           <Overview productId={this.state.productId} avgRating={this.state.avgRating} noOfReviews={this.state.noOfReviews}/>
         </OverviewErrorBoundary>
         <RelatedItems />
-        <QAndA productId={this.state.productId}/>
+        <QAndA productId={this.state.productId}/> */}
         <ReviewsErrorBoundary>
           <Reviews
             productId={this.state.productId}

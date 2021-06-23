@@ -265,6 +265,5 @@ var server = app.listen(port, () => {
   var port1 = server.address().port;
   console.log('HOST', host1);
   console.log('PORT', port1);
-  console.log('preocess.env port', process.env.PORT)
   console.log(`Listening on port http://localhost:${port}`);
 });

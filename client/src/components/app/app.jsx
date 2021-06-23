@@ -262,7 +262,9 @@ class App extends React.Component {
   }
 
   getAllReviews = (endIdx = 2) => {
-    return fetch(`http://localhost:3000/allReviews?productId=${this.state.productId}`)
+    let reviewsUrl = process.env.NODE_ENV === 'development' ? `http://localhost:3000/allReviews?productId=${this.state.productId}` : `http://100.25.103.20/allReviews?productId=${this.state.productId}`;
+
+    return fetch(reviewsUrl)
     .then((resp) => resp.json())
     .then((allReviews) => {
       // console.log('all reviews', allReviews)

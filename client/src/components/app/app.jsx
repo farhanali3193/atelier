@@ -262,12 +262,14 @@ class App extends React.Component {
   }
 
   getAllReviews = (endIdx = 2) => {
+    console.log('process env', process.env.NODE_ENV)
     let reviewsUrl = process.env.NODE_ENV === 'development' ? `http://localhost:3000/allReviews?productId=${this.state.productId}` : `http://100.25.103.20/allReviews?productId=${this.state.productId}`;
 
+    console.log('reviews URL', reviewsUrl)
     return fetch(reviewsUrl)
     .then((resp) => resp.json())
     .then((allReviews) => {
-      // console.log('all reviews', allReviews)
+      console.log('all reviews', allReviews)
       let avgRating = findAvgRating(allReviews);
       let totalReviews = sortByCriteria(this.state.reviewCriteria, allReviews)
       let helpfulReviews = JSON.parse(window.localStorage.getItem('helpfulReviews'));

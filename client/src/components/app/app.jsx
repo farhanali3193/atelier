@@ -7,7 +7,7 @@ import {findAvgRating, sortByCriteria} from '../../../../helper/reviewsHelper.js
 import ReviewsErrorBoundary from '../errorBoundary/reviewsErrorBoundary.jsx';
 import OverviewErrorBoundary from '../errorBoundary/overviewErrorBoundary.jsx'
 
-const BACKEND_URL = process.env.NODE_ENV === 'development' ? `http://localhost:3000` : `http://100.25.103.20`;
+export const BACKEND_URL = process.env.NODE_ENV === 'development' ? `http://localhost:3000` : `http://100.25.103.20`;
 
 class App extends React.Component {
   constructor (props) {
@@ -406,10 +406,10 @@ class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        {/* <OverviewErrorBoundary>
+        <OverviewErrorBoundary>
           <Overview productId={this.state.productId} avgRating={this.state.avgRating} noOfReviews={this.state.noOfReviews}/>
         </OverviewErrorBoundary>
-        <RelatedItems />
+        {/* <RelatedItems />
         <QAndA productId={this.state.productId}/> */}
         <ReviewsErrorBoundary>
           <Reviews

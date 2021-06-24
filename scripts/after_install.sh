@@ -6,7 +6,7 @@ sudo chmod -R 777 /home/ubuntu/atelier
 cp /home/ubuntu/temp/.env /home/ubuntu/atelier/.env
 cp /home/ubuntu/temp/uploads /home/ubuntu/atelier/uploads
 
-sudo apt-get install git
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-nvm install node
+# sudo apt-get install git
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+# nvm install node
 # EOF

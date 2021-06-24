@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd /home/ubuntu/atelier && npm install
+cd /home/ubuntu/atelier
+npm install
 npm run build-prod
 
 # sudo service nginx restart

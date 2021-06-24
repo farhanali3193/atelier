@@ -7,7 +7,7 @@ import {findAvgRating, sortByCriteria} from '../../../../helper/reviewsHelper.js
 import ReviewsErrorBoundary from '../errorBoundary/reviewsErrorBoundary.jsx';
 import OverviewErrorBoundary from '../errorBoundary/overviewErrorBoundary.jsx'
 
-export const BACKEND_URL = process.env.NODE_ENV === 'development' ? `http://localhost:3000` : `http://54.86.190.136`;
+export const BACKEND_URL = process.env.NODE_ENV === 'development' ? `http://localhost:3000` : `http://100.26.17.141`;
 
 class App extends React.Component {
   constructor (props) {

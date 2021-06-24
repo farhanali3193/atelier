@@ -6,10 +6,10 @@ files:
     destination: /home/ubuntu/atelier
     file_exists_behavior: OVERWRITE
 
-hooks:
-  BeforeInstall:
-    - location: scripts/before_install.sh
-  AfterInstall:
-    - location: scripts/after_install.sh
-  ApplicationStart:
-    - location: scripts/application_start.sh
+# hooks:
+#   BeforeInstall:
+#     - location: scripts/before_install.sh
+#   AfterInstall:
+#     - location: scripts/after_install.sh
+#   ApplicationStart:
+#     - location: scripts/application_start.sh

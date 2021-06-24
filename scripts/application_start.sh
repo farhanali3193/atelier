@@ -1,4 +1,4 @@
-#!/bin/bash
+source /home/ubuntu/.bash_profile
 
 cd /home/ubuntu/atelier
 npm install

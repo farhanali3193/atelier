@@ -4,8 +4,8 @@
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 cd /home/ubuntu/atelier
-sudo /home/ubuntu/.nvm/versions/node/v16.4.0/bin/node
-sudo /home/ubuntu/.nvm/versions/node/v16.4.0/bin/npm install
+sudo ln -s /home/ubuntu/.nvm/versions/node/v16.4.0/bin/node
+npm install
 # npm run build-prod
 
 # sudo service nginx restart

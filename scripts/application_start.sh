@@ -5,7 +5,7 @@
 
 cd /home/ubuntu/atelier
 sudo npm install
-npm run build-prod
+sudo npm run build-prod
 
 # sudo service nginx restart
 

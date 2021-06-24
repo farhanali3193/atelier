@@ -2,8 +2,10 @@
 
 
 #copy .env, pm2 ecosystem files and move them to a temp folder
+mkdir /home/ubuntu/temp/
 cp /home/ubuntu/atelier/.env /home/ubuntu/temp/
 cp /home/ubuntu/atelier/ecosystem.config.js /home/ubuntu/temp/
 cp /home/ubuntu/atelier/uploads /home/ubuntu/temp/
 sudo rm -r -f /home/ubuntu/atelier/
+mkdir /home/ubuntu/atelier
 # EOF

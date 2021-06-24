@@ -11,5 +11,5 @@ hooks:
     - location: scripts/before_install.sh
   AfterInstall:
     - location: scripts/after_install.sh
-#   ApplicationStart:
-#     - location: scripts/application_start.sh
+  ApplicationStart:
+    - location: scripts/application_start.sh

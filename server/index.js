@@ -217,6 +217,7 @@ app.post('/interactions', async (req, res) => {
 })
 
 app.post('/uploadImage', upload.single('imageFile'), async (req, res) => {
+  console.log('BEFORE', __dirname)
   try {
     console.log('req body', req.body, 'file', req.file);
     var file = path.join(__dirname, '..', 'uploads', `${req.file.filename}`)

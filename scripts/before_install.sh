@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #copy .env, pm2 ecosystem files and move them to a temp folder
 mkdir -p /home/ubuntu/temp/
 mkdir -p /home/ubuntu/uploads/

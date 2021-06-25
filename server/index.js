@@ -234,7 +234,7 @@ app.post('/uploadImage', upload.single('imageFile'), async (req, res) => {
       res.status(201).send(JSON.stringify(data.Location));
     })
     .catch((err) => {
-      console.log("Error", err);
+      console.log("Error Uploading to S3", err);
     })
 
   } catch (err) {

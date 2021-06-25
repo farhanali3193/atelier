@@ -6,6 +6,7 @@ sudo chmod -R 777 /home/ubuntu/atelier
 cp /home/ubuntu/temp/.env /home/ubuntu/atelier/.env
 cp /home/ubuntu/temp/ecosystem.config.js /home/ubuntu/atelier/ecosystem.config.js
 mkdir -p /home/ubuntu/atelier/uploads
+sudo chmod -R 777 /home/ubuntu/atelier
 cd /home/ubuntu/atelier
 npm install
 # EOF

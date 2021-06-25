@@ -13,3 +13,4 @@ hooks:
     - location: scripts/after_install.sh
   ApplicationStart:
     - location: scripts/application_start.sh
+    -runas: root

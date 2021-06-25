@@ -2,6 +2,7 @@
 
 cd /home/ubuntu/atelier
 npm run build-prod
+cd /home/ubuntu/atelier
 pm2 reload ecosystem.config.js --env production
 
 # cp /home/ubuntu/temp/ecosystem.config.js /home/ubuntu/atelier/ecosystem.config.js

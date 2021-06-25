@@ -9,4 +9,5 @@ mkdir -p /home/ubuntu/atelier/uploads
 sudo chmod -R 777 /home/ubuntu/atelier
 cd /home/ubuntu/atelier
 npm install
+
 # EOF

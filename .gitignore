@@ -3,3 +3,4 @@ bundle.js
 .env
 coverage
 .DS_Store
+uploads

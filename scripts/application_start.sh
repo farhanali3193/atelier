@@ -2,6 +2,7 @@
 
 cd /home/ubuntu/atelier
 npm run build-prod
+pm2 start ecosystem.config.js --env production
 # sudo /usr/local/bin/pm2 reload ecosystem.config.js --env production
 # sudo pm2 reload ecosystem.config.js --env production
 # sudo /etc/init.d/nginx reload

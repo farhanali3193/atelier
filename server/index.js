@@ -14,7 +14,7 @@ const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/')
+    cb(null, path.join(__dirname, '..', '..', 'uploads/'))
   },
   filename: function (req, file, cb) {
     cb(null, 'tempImage')
@@ -218,7 +218,7 @@ app.post('/interactions', async (req, res) => {
 app.post('/uploadImage', upload.single('imageFile'), async (req, res) => {
   try {
     console.log('req body', req.body, 'file', req.file);
-    var file = path.join(__dirname, '..', 'uploads', 'tempImage')
+    var file = path.join(__dirname, '..', '..', 'uploads', 'tempImage')
     console.log('file', file)
 
     var fileStream = fs.createReadStream(file);

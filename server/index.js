@@ -219,7 +219,7 @@ app.post('/uploadImage', upload.single('imageFile'), async (req, res) => {
   try {
     console.log('req body', req.body, 'file', req.file);
     var file = path.join(__dirname, '..', 'uploads', 'tempImage')
-    // console.log('file', file)
+    console.log('file', file)
 
     var fileStream = fs.createReadStream(file);
     fileStream.on('error', function(err) {

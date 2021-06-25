@@ -9,6 +9,7 @@ sudo chmod -R 777 /home/ubuntu/atelier
 cd /home/ubuntu/atelier
 npm install
 
+
 # EOF
 #pm2 logs error
 #   at Object.<anonymous> (/home/ubuntu/atelier/server/index.js:1:1)

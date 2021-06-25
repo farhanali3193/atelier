@@ -14,7 +14,7 @@ const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/')
+    cb(null, path.join(__dirname, '..', 'uploads/'))
   },
   filename: function (req, file, cb) {
     cb(null, 'tempImage')

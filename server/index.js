@@ -12,17 +12,16 @@ const apiUrl = `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp`;
 const gitToken = process.env.GIT_API_TOKEN;
 const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
-// var storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, path.join(__dirname, '..', 'uploads/'))
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, 'tempImage')
-//   }
-// })
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, 'tempImage')
+  }
+})
 
-// var upload = multer({ storage: storage })
-var upload = multer({ dest: 'uploads/' })
+var upload = multer({ storage: storage })
 
 const app = express();
 const servingPath = path.join(__dirname, '..', 'client', 'dist');
@@ -217,10 +216,9 @@ app.post('/interactions', async (req, res) => {
 })
 
 app.post('/uploadImage', upload.single('imageFile'), async (req, res) => {
-  console.log('BEFORE', __dirname)
   try {
     console.log('req body', req.body, 'file', req.file);
-    var file = path.join(__dirname, '..', 'uploads', `${req.file.filename}`)
+    var file = path.join(__dirname, '..', 'uploads', 'tempImage')
     console.log('file', file)
 
     var fileStream = fs.createReadStream(file);

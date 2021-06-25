@@ -2,6 +2,7 @@
 
 cd /home/ubuntu/atelier
 npm run build-prod
+cd /home/ubuntu/
 # pm2 kill
 # pm2 restart ecosystem.config.js --env production
 # sudo /usr/local/bin/pm2 reload ecosystem.config.js --env production

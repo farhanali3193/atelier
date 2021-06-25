@@ -5,6 +5,7 @@
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 cd /home/ubuntu/atelier
+nvm install node
 npm install
 # npm run build-prod
 

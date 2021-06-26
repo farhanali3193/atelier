@@ -4,7 +4,12 @@ import Cart from './Cart.jsx';
 import StyleSelector from './StyleSelector.jsx';
 import ImageGallery from './ImageGallery.jsx';
 import WithTracking from '../hoc/withTracking.jsx';
+<<<<<<< HEAD
 import {BACKEND_URL} from '../app/app.jsx';
+=======
+import SloganDescription from './SloganDescription.jsx';
+import Features from './Features.jsx';
+>>>>>>> 88f570f82f69e753d6522ddb9e1f17eee434a5ef
 
 export class Overview extends React.Component {
   constructor(props) {
@@ -106,6 +111,10 @@ export class Overview extends React.Component {
           <ProductInfo product={this.state.product} currentStyle={this.state.currentStyle} avgRating={this.props.avgRating} noOfReviews={this.props.noOfReviews}/>
           <StyleSelector updateStyle={this.updateStyle.bind(this)} styles={this.state.styles} currentStyle={this.state.currentStyle}/>
           <Cart currStyle={this.state.currentStyle}/>
+          <div className='slogan-feature-container'>
+            <SloganDescription product={this.state.product}/>
+            <Features product={this.state.product}/>
+          </div>
         </div>
       );
     }

@@ -16,6 +16,7 @@ const app = express();
 const servingPath = path.join(__dirname, '..', 'client', 'dist');
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(express.static(servingPath));
+app.use(bodyParser.json({limit: '50mb'}));
 app.use(cors());
 
 // Products API --------------------------------------------------------

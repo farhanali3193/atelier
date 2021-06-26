@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const AWS = require("aws-sdk");
-// const multer  = require('multer');
 const multiparty = require('multiparty');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -12,17 +11,6 @@ const cors = require('cors');
 const apiUrl = `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp`;
 const gitToken = process.env.GIT_API_TOKEN;
 const s3 = new AWS.S3({apiVersion: '2006-03-01'});
-
-// var storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, path.join(__dirname, '..', '..', 'uploads/'))
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, 'tempImage')
-//   }
-// })
-
-// var upload = multer({ storage: storage })
 
 const app = express();
 const servingPath = path.join(__dirname, '..', 'client', 'dist');
@@ -218,25 +206,6 @@ app.post('/interactions', async (req, res) => {
 
 app.post('/uploadImage', async (req, res) => {
   try {
-    // console.log('req body', req.body, 'file', req.file);
-    // var file = path.join(__dirname, '..', '..', 'uploads', 'tempImage')
-    // console.log('file', file)
-
-    // var fileStream = fs.createReadStream(file);
-    // fileStream.on('error', function(err) {
-    //     console.log('File Error', err);
-    // });
-
-    // var uploadParams = {Bucket: 'addreview-photos', Key: `${req.file.filename}-${Date.now()}`, Body: fileStream, ContentType:'image/jpeg'};
-
-    // s3.upload (uploadParams).promise()
-    // .then((data) => {
-    //   console.log("Upload Success", data.Location);
-    //   res.status(201).send(JSON.stringify(data.Location));
-    // })
-    // .catch((err) => {
-    //   console.log("Error Uploading to S3", err);
-    // })
     var form = new multiparty.Form();
 
     form.on('part', function(part) {

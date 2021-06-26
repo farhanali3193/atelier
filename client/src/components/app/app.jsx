@@ -264,10 +264,9 @@ class App extends React.Component {
   }
 
   getAllReviews = (endIdx = 2) => {
-    console.log('process env', process.env.NODE_ENV)
+    // console.log('process env', process.env.NODE_ENV)
     let reviewsUrl = `${BACKEND_URL}/allReviews?productId=${this.state.productId}`;
 
-    // console.log('reviews URL', reviewsUrl)
     return fetch(reviewsUrl)
     .then((resp) => resp.json())
     .then((allReviews) => {

@@ -37,6 +37,9 @@ class AppSearch extends React.Component {
           products,
         }), () => console.log('state after getting all pdts', this.state))
       })
+      .catch((err) => {
+        console.log('ERROR GETTING PDTS', err)
+      })
   }
 
   // onclick for resetting search bar after search results click

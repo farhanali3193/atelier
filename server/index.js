@@ -23,13 +23,14 @@ app.use(cors());
 // Products API --------------------------------------------------------
 
 app.get('/products', (req, res) => {
+  console.log('HELLO')
   return axios.get(`${apiUrl}/products?count=100000`, {
     headers: {
       'Authorization': gitToken
     }
   })
   .then((results) => {
-    // console.log('results', results.data);
+    console.log('results', results.data);
     let filteredData = results.data.map((pdt) => {
       return {
         id: pdt.id,

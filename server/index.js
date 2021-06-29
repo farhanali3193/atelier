@@ -16,7 +16,6 @@ const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 const app = express();
 app.use(compression());
 const servingPath = path.join(__dirname, '..', 'client', 'dist');
-app.use(bodyParser.json({limit: '50mb'}));
 app.use(express.static(servingPath));
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(cors());

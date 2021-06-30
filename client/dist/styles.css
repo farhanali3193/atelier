@@ -311,7 +311,7 @@
 }
 
 .read-reviews a {
-  color: darkgray;
+  color: rgb(32, 32, 32);
   margin-left: 8px;
   font-size: 0.9em;
   position: relative;
@@ -320,13 +320,13 @@
 }
 
 .read-reviews a:hover {
-  color: black;
+  color: rgb(99, 99, 99);
   cursor: pointer;
 }
 
 .product-category {
-  text-transform: capitalize;
-  color: grey;
+  text-transform: uppercase;
+  color: rgb(56, 56, 56);
   font-size: 1.2em;
 }
 
@@ -439,8 +439,8 @@
 }
 
 .style-name {
-  font-size: 0.8em;
-  color: grey;
+  font-size: 0.9em;
+  color: rgb(54, 54, 54);
 }
 
 .style-row {
@@ -602,10 +602,10 @@
   font-size: 1.4em;
   font-weight: bold;
 }
-
+/*
 .card-category {
-  /* text-transform: uppercase; */
-}
+  text-transform: uppercase;
+} */
 
 .card-price {
   margin: 4px 0;
@@ -985,7 +985,7 @@
 
 .add-review-modal-main {
   display: grid;
-  grid-template-rows: 25px 25px  60px 30px 290px 50px auto 70px 70px;
+  grid-template-rows: 20px 20px auto;
   position:fixed;
   background: white;
   width: 70%;
